@@ -1,0 +1,109 @@
+
+header {
+    display: flex;
+    height: 70px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+body {
+    background-image: url("fondopantalla.jpg");
+}
+
+nav a {
+    font-weight: 600;
+    padding: 10px;
+}
+
+nav a:hover {
+    color: rgb(0, 215, 253);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+nav a {
+    font-weight: 600;
+    padding: 10px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.foto{
+    text-align: center;
+    font-size: 50px;
+}
+
+.portal {
+    display: flex;
+    background: 50% no-repeat;
+    background-image: url("portalimg.jpg");
+    background-size: cover;
+    height: 229px;
+    justify-content: center;
+    align-items: center;
+}
+
+.portaltext {
+    font-size: 50px;
+    line-height: 50px;
+    color: white;
+}
+
+.slider{
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider ul{
+    display: flex;
+    padding: 0;
+    width: 500%;
+
+    animation: cambio 20s infinite alternate;
+    animation-timing-function: ease-out;
+}
+
+.slider li{
+    list-style: none;
+
+}
+
+.slider img {
+    height: 55%;
+    width: 100%;
+}
+
+@keyframes cambio {
+    0% {margin-left: 0; }
+    15% {margin-left: 0; }
+
+    20% {margin-left: -100%; }
+    35% {margin-left: -100%; }
+
+    40% {margin-left: -200%; }
+    55% {margin-left: -200%; }
+
+    60% {margin-left: -300%; }
+    75% {margin-left: -300%; }
+
+    80% {margin-left: -400%; }
+    100% {margin-left: -400%; }
+
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(63, 63, 63);
+    color: white;
+    text-align: center;
+ }

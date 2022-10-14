@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasajes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script type="text/javascript">
+
+    function cargacompleta(){
+
+        alert("La carga fue completada con exito")
+    }
+
+    function antinum(){
+                c=event.keyCode;
+                if (! (c>65 && c<123))
+                    event.returnValue = false;
+            }
+
+    function antiletras(){
+                c=event.keyCode;
+                if (! (c>47 && c<58))
+                    event.returnValue = false;
+            }
+</script>
+<body>
+    <br>
+    <header>
+        <div class ="logo">
+            <img src="logoalmundo.png" alt="">
+            <h1 class="logoalmundo">Empresa de Viajes y Turismo</h1>
+        </div>
+        <nav>
+            <a href="main.html" class ="link">Menu Principal</a>
+            <a href="presupuesto.html" class ="link">Presupuestos</a>
+        </nav>
+     </header>
+     <br>
+     <br>
+     <div class="portal" align="center">
+         <p class="portaltext">¿Como podemos ayudarte?</p>
+     </div>
+     <div class="Formulario">
+        <form name="Formulario" action="" method="get" onsubmit="return validar()">
+            <h3>Deja tus datos para que un vendedor se contacte contigo.</h3>
+            <fieldset>
+                <legend>Datos</legend>
+                Nombre:<input type="text" name="txtNombre" value="" placeholder="Escribe tu nombre" onkeypress="antinum()">
+                <br>
+                Apellido:<input type="text" name="txtApellido" value="" placeholder="Escribe tu apellido" onkeypress="antinum()">
+                <br>
+                DNI:<input type="number" value="" name="txtDNI" placeholder="Numero de DNI" onkeypress="antiletras()">
+                <br>
+                Mail:<input type="email" value="" name="txtMail" placeholder="ejemplo@gmail.com">
+            </fieldset>
+            <fieldset>
+                <button type="submit" onclick="cargacompleta()">Enviar Consulta</button>
+            </fieldset>
+        </form>
+     </div>
+     <div class="footer">
+         <p>Atención al cliente: 0810.220.1309</p>
+         <p>Lunes a viernes de 10 a 21hs.
+            Sábados de 10 a 16hs.</p>
+     </div>
+</body>
+
+
+</html>

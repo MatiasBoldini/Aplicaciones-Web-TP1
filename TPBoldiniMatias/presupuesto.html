@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasajes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script lenguaje="javascript" type="text/javascript">
+
+    function Presupuesto()
+    {
+        Destino=parseInt(Formu.Destino.value);
+        
+        if (Formu.optSeguro[0].checked)
+        {
+            Destino = Destino * 1.25;
+        }
+        if (Formu.optSeguro[1].checked)
+        {
+            Destino=Destino * 1.1;
+        }
+        if (Formu.optSeguro[2].checked)
+        {
+            Destino=Destino * 1.05;
+        }
+
+        alert(Destino)
+    }
+</script>
+<body>
+    <br>
+    <header>
+        <div class ="logo">
+            <img src="logoalmundo.png" alt="">
+            <h1 class="logoalmundo">Empresa de Viajes y Turismo</h1>
+        </div>
+        <nav>
+            <a href="main.html" class ="link">Menu Principal</a>
+            <a href="consulta.html" class ="link">Consultas</a>
+        </nav>
+     </header>
+     <br>
+     <br>
+     <div class="Formulario">
+        <form name="Formu" action="" method="get">
+            <h2> Aqui puede hacer su presupuesto</h2>
+            <h4>Todos los precios son en USD</h4>
+            Destinos: <select id="Destino">
+                <option value="1500">Cancun</option>
+                <option value="2300">Barcelona</option>
+                <option value="2600">Nueva York</option>
+                <option value="900">Rio de Janeiro</option>
+                <option value="3500">Qatar</option>
+            </select>
+            <br>
+            <fieldset>
+                <legend> Seguro de viaje Assist Card</legend>
+                <input type="radio" name="optSeguro" value="a" checked> Seguro A Todo Riesgo
+                <br>
+                <input type="radio" name="optSeguro" value="b"> Seguro Media Cobertura
+                <br>
+                <input type="radio" name="optSeguro" value="c"> Seguro Basico y Obligatorio
+            </fieldset>
+
+            <input type="button" value="Calcular Presupuesto Viaje" onclick="Presupuesto()">
+        </form>
+     </div>
+     <div class="footer">
+         <p>Atención al cliente: 0810.220.1309</p>
+         <p>Lunes a viernes de 10 a 21hs.
+            Sábados de 10 a 16hs.</p>
+     </div>
+</body>
+
+
+</html>
